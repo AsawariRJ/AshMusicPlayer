@@ -1,0 +1,39 @@
+.bg-black{
+    background-color: black;
+    color: white;
+}
+.bg-grey{
+    background-color: #1f1f1f;
+}
+
+.m-1{
+    margin:5px;
+
+}
+.rounded{
+        border-radius: 10px;
+}
+/* Styling for WebKit-based browsers */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #333; /* Background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555; /* Color of the draggable part of the scrollbar (the thumb) */
+    border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #777; /* Color of the thumb on hover */
+}
+
+/* Styling for Firefox */
+* {
+    scrollbar-width: thin; /* Make the scrollbar thin */
+    scrollbar-color: #555 #333; /* Thumb color and track color */
+}
+
