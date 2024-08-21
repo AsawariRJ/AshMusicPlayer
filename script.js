@@ -39,7 +39,7 @@ const playMusic = (track) => {
     //let audio=new Audio("/songs/"+track);
     currentSong.src = "/songs/" + track;
     currentSong.play();
-    play.src = "pause.svg";
+    play.src = "images/pause.svg";
     document.querySelector(".songInfo").innerHTML = track
     document.querySelector(".songTime").innerHTML = "00:00 / 00:00"
 
@@ -61,14 +61,14 @@ async function main() {
     });
     let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0]
     for (const song of songs) {
-        songUL.innerHTML = songUL.innerHTML + `<li><img class="invert" src="music.svg" alt="">
+        songUL.innerHTML = songUL.innerHTML + `<li><img class="invert" src="images/music.svg" alt="">
                             <div class="info">
                                 <div class="songName">${song.replaceAll("%20", " ")}</div>
                                 <div class="artist">Ash</div>
                             </div>
                             <div class="playnow">
                                 <span>Play Now</span>
-                                <img class="invert pn" src="playnow.svg" alt="">
+                                <img class="invert pn" src="images/playnow.svg" alt="">
                             </div></li> `;
     }
     Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e => {
@@ -82,11 +82,11 @@ async function main() {
     play.addEventListener("click", () => {
         if (currentSong.paused) {
             currentSong.play()
-            play.src = "pause.svg"
+            play.src = "images/pause.svg"
         }
         else {
             currentSong.pause();
-            play.src = "play.svg"
+            play.src = "images/play.svg"
         }
     })
 
